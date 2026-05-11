@@ -33,7 +33,7 @@ The main research goals are:
 
 ### Robotic Platform
 
-<img src="media/images/imagen1.jpeg" alt="Low-cost plantain row-following robot platform" width="650">
+<img src="media/images/imagen1.jpeg" alt="Low-cost plantain row-following robot platform" width="325">
 
 ### System Diagrams
 
