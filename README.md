@@ -40,11 +40,8 @@ The robot is not only a row-following platform; it also supports visual data acq
 
 <img src="media/images/imagen1.jpeg" alt="Low-cost plantain row-following robot platform" width="325">
 
-### System Diagrams
-
 <p align="center">
   <img src="media/images/Dibujo1.PNG" alt="System diagram 1" width="420">
-  <img src="media/images/Dibujo2.PNG" alt="System diagram 2" width="420">
 </p>
 
 ### Demonstration Video
