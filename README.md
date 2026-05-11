@@ -29,6 +29,25 @@ The main research goals are:
 - to log experimental data for analysis and reproducibility,
 - to support agricultural robotics research with open and understandable documentation.
 
+## Visual Overview
+
+### Robotic Platform
+
+<img src="media/images/imagen1.jpeg" alt="Low-cost plantain row-following robot platform" width="650">
+
+### System Diagrams
+
+<p align="center">
+  <img src="media/images/Dibujo1.PNG" alt="System diagram 1" width="420">
+  <img src="media/images/Dibujo2.PNG" alt="System diagram 2" width="420">
+</p>
+
+### Demonstration Video
+
+[![Robotic prototypes from postdoctoral research](https://img.youtube.com/vi/eixFaqiUshI/hqdefault.jpg)](https://www.youtube.com/watch?v=eixFaqiUshI)
+
+This video presents robotic prototypes developed as part of my postdoctoral research work on low-cost autonomous robots for agricultural environments.
+
 ## System Architecture
 
 ```mermaid
