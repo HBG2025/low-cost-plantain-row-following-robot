@@ -2,11 +2,11 @@
 
 This repository documents a low-cost autonomous robotic platform for plantain crop row-following under canopy conditions.
 
-The system integrates an ESP32-based low-level controller, ROS 2 nodes for perception and decision-making, LiDAR-based lateral distance estimation, BNO055-assisted geometric yaw compensation, and a fuzzy controller for steering commands.
+The platform, informally known as **"El Chino de los Mandados"**, integrates an ESP32-based low-level controller, ROS 2 nodes for perception and decision-making, LiDAR-based lateral distance estimation, BNO055-assisted geometric yaw compensation, and a fuzzy controller for steering commands.
 
 ## Related Work
 
-This repository is associated with an ongoing manuscript on low-cost autonomous navigation for plantain crop environments.
+This repository is associated with an ongoing manuscript on low-cost autonomous navigation in plantain crop environments.
 
 Original student repository:
 
@@ -14,35 +14,34 @@ Original student repository:
 
 This curated repository reorganizes the material to improve readability, documentation, reproducibility, and research presentation.
 
-## System Overview
+## Research Context
 
-The robotic platform follows plantain crop rows using low-cost embedded hardware and ROS 2-based processing.
+The project addresses low-cost autonomous navigation for agricultural environments, with emphasis on plantain crop rows and under-canopy operation.
 
-Main system components:
+The system was designed to explore how affordable embedded hardware, LiDAR sensing, IMU-assisted geometric correction, and ROS 2-based processing can be integrated into a field-oriented robotic platform.
 
-- **ESP32 firmware:** low-level control, encoder reading, BNO055 IMU acquisition, serial communication, and actuator command handling.
-- **ROS 2 processing layer:** serial communication, LiDAR processing, lateral distance estimation, image logging, and fuzzy steering control.
-- **LiDAR sensing:** lateral distance estimation using a selected measurement cone.
-- **BNO055 IMU:** geometric auxiliary used to orient or correct the LiDAR measurement cone.
-- **Fuzzy control:** high-level steering command generation for row-following behavior.
-- **Experimental logs:** CSV files with robot measurements and trial data.
+The main research goals are:
 
-## Repository Structure
+- to develop a low-cost robotic platform for crop-row navigation,
+- to estimate lateral distance using LiDAR measurements,
+- to compensate the LiDAR measurement cone using IMU-based yaw information,
+- to generate steering references using a fuzzy controller,
+- to log experimental data for analysis and reproducibility,
+- to support agricultural robotics research with open and understandable documentation.
 
-```text
-firmware/
-└── esp32/                  ESP32 PlatformIO firmware
+## System Architecture
 
-ros2_ws/
-└── hinf/                   ROS 2 package and nodes
-
-data/
-└── experimental_trials/    Experimental CSV logs
-
-figures/
-└── experimental_results/   Plots and figures related to experiments
-
-media/
-└── images/                 Robot images and visual material
-
-docs/                       Technical documentation
+```mermaid
+flowchart LR
+    A[LiDAR Sensor] --> B[ROS 2 LiDAR Processing Node]
+    C[BNO055 IMU] --> D[ESP32 Firmware]
+    E[Steering Encoder] --> D
+    D --> F[ROS 2 Serial Bridge]
+    F --> G[ROS 2 Fuzzy Controller]
+    B --> G
+    G --> F
+    F --> D
+    D --> H[Steering Actuator / Vehicle Platform]
+    F --> I[Experimental Logs]
+    B --> I
+    G --> I
