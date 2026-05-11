@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../platformIoProjects/steering_andpropulsion"
+		},
+		{
+			"name": "steering",
+			"path": "../../chinoMandados/steering/steering"
+		},
+		{
+			"name": "PimotorDC",
+			"path": "../../PimotorDC"
+		},
+		{
+			"name": "PimotorDC (Copy)",
+			"path": "../../PimotorDC (Copy)"
+		},
+		{
+			"name": "hola",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
